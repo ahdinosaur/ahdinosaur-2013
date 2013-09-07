@@ -1,0 +1,283 @@
+date: 2013-09-07 16:49:19.663
+argv: node /usr/local/bin/hexo generate
+os: Linux 3.9-1-amd64 linux x64
+version:
+  hexo: 2.0.6
+  http_parser: 1.0
+  node: 0.10.7
+  v8: 3.14.5.8
+  ares: 1.9.0-DEV
+  uv: 0.10.7
+  zlib: 1.2.3
+  modules: 11
+  openssl: 1.0.1e
+---
+
+ration loaded
+[debug] 16:49:16.801 Theme source loaded
+[debug] 16:49:16.805 Theme i18n loaded
+[debug] 16:49:16.863 Processed: resume.html
+[debug] 16:49:16.892 Processed: _posts/new-blog.md
+[debug] 16:49:16.937 Cache saved
+[info] 16:49:16.938 Files loaded in 0.423s
+[debug] 16:49:16.974 Public folder not exists. No need to clear public folder.
+[debug] 16:49:17.075 Render archive: archives/
+[debug] 16:49:17.076 Render archive: archives/2013/
+[debug] 16:49:17.076 Render archive: archives/2013/09/
+[debug] 16:49:17.076 Render index: 
+[debug] 16:49:17.076 Render page: resume.html
+[debug] 16:49:17.076 Render post: new-blog/
+[debug] 16:49:17.076 Render tag: tags/meta/
+[error] 16:49:19.613 HexoError: Render failed: archives/index.html
+TypeError: /home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/local/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 16:49:19.626 HexoError: Render failed: archives/2013/index.html
+TypeError: /home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/local/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 16:49:19.633 HexoError: Render failed: archives/2013/09/index.html
+TypeError: /home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/local/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+[debug] 16:49:15.911 Configuration file load successfully
+[debug] 16:49:15.919 Version info checked successfully
+[debug] 16:49:16.603 Theme layout loaded
+[debug] 16:49:16.663 Processed: _drafts/art-gallery-using-meteor.md
+[debug] 16:49:16.701 Theme configuration loaded
+[debug] 16:49:16.801 Theme source loaded
+[debug] 16:49:16.805 Theme i18n loaded
+[debug] 16:49:16.863 Processed: resume.html
+[debug] 16:49:16.892 Processed: _posts/new-blog.md
+[debug] 16:49:16.937 Cache saved
+[info] 16:49:16.938 Files loaded in 0.423s
+[debug] 16:49:16.974 Public folder not exists. No need to clear public folder.
+[debug] 16:49:17.075 Render archive: archives/
+[debug] 16:49:17.076 Render archive: archives/2013/
+[debug] 16:49:17.076 Render archive: archives/2013/09/
+[debug] 16:49:17.076 Render index: 
+[debug] 16:49:17.076 Render page: resume.html
+[debug] 16:49:17.076 Render post: new-blog/
+[debug] 16:49:17.076 Render tag: tags/meta/
+[error] 16:49:19.613 HexoError: Render failed: archives/index.html
+TypeError: /home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/local/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 16:49:19.626 HexoError: Render failed: archives/2013/index.html
+TypeError: /home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/local/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 16:49:19.633 HexoError: Render failed: archives/2013/09/index.html
+TypeError: /home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/archive.ejs:1
+ >> 1| <%- partial('_partial/archive', {pagination: config.archive}) %>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/archive.ejs:24
+    22|           <%- partial('post/date', {item: item, type: "archive"}) %>
+    23|           <br>
+ >> 24|           <%- partial('post/tag', {item: item, type: "archive"}) %>
+    25|           <% if(config.disqus_short_name && item.comments) { %>
+    26|             <span class="comments">
+    27|               <a href="<%- config.root %><%- item.path %>#disqus_thread">Comments</a>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/local/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)
+
+[error] 16:49:19.662 HexoError: Render failed: index.html
+TypeError: /home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/index.ejs:3
+    1| <div itemscope itemtype="http://schema.org/Blog">
+    2| <% page.posts.each(function(item){ %>
+ >> 3|   <%- partial('_partial/post', {item: item, index: true}) %>
+    4| <% }); %>
+    5| </div>
+    6| 
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post.ejs:2
+    1| <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+ >> 2|   <%- partial('article', {item: item, index: index})%>
+    3| </article>
+    4| <% if(!index) { %>
+    5|   <%- partial('post/sharing') %>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/article.ejs:5
+    3| 	<div class="meta">
+    4|           <%- partial('post/date', {type: "index"}) %>
+ >> 5|           <%- partial('post/tag', {type: "index"}) %>
+    6|           <% if(item.comment & config.disqus_shortname) { %>
+    7|           <span class="comments">
+    8|             <a href="<%- item.permalink %>#disqus_thread">Comments</a>
+
+/home/michael/repos/ahdinosaur/ahdinosaur/themes/greyshade/layout/_partial/post/tag.ejs:9
+    7|    } %>
+    8| <% if(item.tags && item.tags.length) { %>
+ >> 9|  <%
+    10|   var tags = [];
+    11|   item.tags.forEach(function(tag){
+    12|     tags.push('<a href="' + config.root + tag.path + '">' + tag.name + '</a>');
+
+Cannot read property 'path' of null
+    at buf.push.__stack.lineno (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:38:46)
+    at Query.forEach.Query.each (/usr/local/lib/node_modules/hexo/node_modules/warehouse/lib/query.js:71:5)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:37:13)
+    at eval (eval at <anonymous> (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:236:14), <anonymous>:40:199)
+    at /usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:249:15
+    at Object.exports.render (/usr/local/lib/node_modules/hexo/node_modules/ejs/lib/ejs.js:287:13)
+    at Object.module.exports [as ejs] (/usr/local/lib/node_modules/hexo/lib/plugins/renderer/ejs.js:5:14)
+    at Object.exports.renderSync (/usr/local/lib/node_modules/hexo/lib/render.js:143:29)
+    at render (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:28:22)
+    at Object.module.exports [as partial] (/usr/local/lib/node_modules/hexo/lib/plugins/helper/partial.js:41:12)

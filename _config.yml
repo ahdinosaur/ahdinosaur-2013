@@ -81,3 +81,4 @@ exclude_generator:
 deploy:
   type: github
   repo: https://github.com/ahdinosaur/ahdinosaur.git
+  branch: master

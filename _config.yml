@@ -80,5 +80,5 @@ exclude_generator:
 ## Docs: http://zespia.tw/hexo/docs/deploy.html
 deploy:
   type: github
-  repo: https://github.com/ahdinosaur/ahdinosaur.git
+  repo: https://github.com/ahdinosaur/ahdinosaur.github.io.git
   branch: master
